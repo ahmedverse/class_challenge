@@ -39,4 +39,10 @@ class FriendsRecord:
         #  returns the age of the name given
         # Side-effects
         #  none
-        pass
+        today = datetime.today()
+        for friend in self.records:
+            if friend['name'] == name:
+                birthdate = datetime.strptime(friend["birthdate"], "%d/%m/%Y")
+                age = today.year - birthdate.year
+                return age
+        

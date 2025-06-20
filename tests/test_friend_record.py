@@ -40,10 +40,11 @@ def test_returns_person_with_earliest_birthday():
     friends_record.add_friend("Lisa", "24/07/2002")
     assert friends_record.check_earliest_birthdate() == "Ali"
 
-# """
-# Calculate age
-# #returns the age of the name given 
-# """
-# friends_records = FriendsRecord()
-# friends_record.add_friend("Ali", "19/07/2002")
-# friends_record.calculate_age() # => 22
+"""
+Calculate age
+#returns the age of the name given 
+"""
+def test_calculate_age_returns_friend_age():
+    friends_record = FriendsRecord()
+    friends_record.add_friend("Ali", "19/07/2002")
+    assert friends_record.calculate_age("Ali") == 23
